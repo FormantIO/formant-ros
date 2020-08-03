@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>formant</name>
+  <version>0.0.0</version>
+  <description>The Formant package</description>
+  <maintainer email="support@formant.io">formant</maintainer>
+  <license>All Rights Reserved</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <exec_depend>rospy</exec_depend>
+  <export></export>
+</package>
