@@ -18,12 +18,14 @@ Run with:
  docker run -it --net host -a stderr -a stdin -a stdout -e TELEOP=1 -e SLAM=1 formant/turtlebot
 ```
 
-Next, follow these [steps](https://help.formant.io/device-management/install-the-first-device) to install the Formant agent on your system.
+You'll want to keep this window around so we can drive the turtlebot to get some `/cmd_vel` messages.
 
-Clone this repository to your `src` folder as another ROS package:
+Next, make sure you have an agent set up on your machine. You can add a new device [here](https://app.formant.io/create-device).
+
+Clone this repository to your catkin workspace `src` folder as another ROS package:
 
 ```
-git clone https://github.com/formant-ros
+git clone https://github.com/FormantIO/formant-ros
 ```
 
 After, building and sourcing your `setup.sh` file, you should be able to launch the formant node at this point with:
@@ -33,8 +35,6 @@ roslaunch formant main.launch
 ```
 
 And you will see a ROS node spinning.
-
-You'll want to keep this window around so we can drive the turtlebot to get some `/cmd_vel` messages.
 
 ## Examples
 
@@ -48,7 +48,7 @@ self._formant_client = FormantClient(
 
 ### Topic Callbacks
 
-One of the more traditional use cases is to subscribe to a ROS topic, perform either a message extraction or transformation on the data and then forward to the Formant agent. In this example we'll extract joint positional data and send as a numeric stream.
+One of the more traditional use cases is to subscribe to a ROS topic, and perform either a message extraction or transformation on the data and then forward to the Formant agent. In this example we'll extract joint positional data and send as a numeric stream.
 
 The first step is subscribing:
 
