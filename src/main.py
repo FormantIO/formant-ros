@@ -7,12 +7,12 @@ from sensor_msgs.msg import JointState
 from formant.sdk.agent.v1 import Client as FormantClient
 
 
-class FormantNode:
+class FormantExampleNode:
     def __init__(self):
         """
         Integration with Formant agent
         """
-        rospy.init_node("formant_node")
+        rospy.init_node("formant_example_node")
         # Create ROS subscribers
         self._subscriptions = [
             rospy.Subscriber(
@@ -65,6 +65,6 @@ class FormantNode:
 
 if __name__ == "__main__":
     try:
-        FormantNode()
+        FormantExampleNode()
     except rospy.ROSInterruptException:
         pass

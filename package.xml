@@ -2,9 +2,9 @@
 <package format="2">
   <name>formant</name>
   <version>0.0.0</version>
-  <description>The Formant package</description>
   <maintainer email="support@formant.io">formant</maintainer>
-  <license>All Rights Reserved</license>
+  <description>Example/starter package for integrating a ROS application with Formant</description>
+  <license>MIT</license>
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>rospy</build_depend>
   <exec_depend>rospy</exec_depend>

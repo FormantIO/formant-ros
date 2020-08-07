@@ -1,3 +1,3 @@
 <launch>
-    <node pkg="formant" type="main.py" name="formant_node" output="screen" />
+    <node pkg="formant" type="main.py" name="formant_example_node" output="screen" />
 </launch>
